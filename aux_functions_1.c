@@ -39,7 +39,7 @@ int check_digit(char *arg)
 	{
 		if (arg[i] == '-' && i == 0)
 			continue;
-		if (isdigit(arg[i]) == 0)
+		if (_isdigit(arg[i]) == 0)
 			return (1);
 	}
 	return (0);
