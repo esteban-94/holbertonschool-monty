@@ -10,6 +10,8 @@
 
 extern int error;
 
+/*   Structures   */
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -40,21 +42,27 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/* Prototypes */
+/* 	 Main Function   */
 
-void _check(char *op, stack_t **stack, unsigned int line_number);
+int main(int argc, char **argv);
+
+/*   Monty Functions   */
+
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
-stack_t *add_node(stack_t **stack, int n);
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-int check_digit(char *arg);
-
-void free_all(stack_t *stack, FILE *fd);
 void _pop(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
+
+/*   Auxiliar Functions   */
+
+void _check(char *op, stack_t **stack, unsigned int line_number);
+stack_t *add_node(stack_t **stack, int n);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+int check_digit(char *arg);
+void free_all(stack_t *stack, FILE *fd);
 
 
 #endif /* MONTY_H */
