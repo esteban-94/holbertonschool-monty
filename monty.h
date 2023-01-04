@@ -63,6 +63,7 @@ stack_t *add_node(stack_t **stack, int n);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int check_digit(char *arg);
 void free_all(stack_t *stack, FILE *fd);
+int _isdigit(int c);
 
 
 #endif /* MONTY_H */
